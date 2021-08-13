@@ -3,6 +3,7 @@ package com.linkedlist;
 public class LinkedList<T> implements ILinkedList<T>
 {
 	Node<T> head;
+	@Override
 	public void add(T data)
 	{
 		Node<T> node=new Node<T>();
@@ -22,6 +23,7 @@ public class LinkedList<T> implements ILinkedList<T>
 			node1.next=node;
 		}
 	}
+	@Override
 	public void display()
 	{
 		Node<T> node=head;
