@@ -34,5 +34,30 @@ public class LinkedList<T> implements ILinkedList<T>
 		}
 		System.out.println(node.data);
 	}
+	@Override
+	public void insertAt(int index,T data)
+	{
+		Node<T> node = new Node<T>();
+		node.data = data;
+		node.next = null;
+		
+		if(index==0)
+		{
+			node.data = data;
+			node.next = null;
+			node.next = head;
+			head = node;
+		}
+		else
+		{
+			Node<T> n = head;
+			for(int i=0;i<index-1;i++)
+			{
+				n = n.next;
+			}
+			node.next = n.next;
+			n.next = node;
+		}
+	}
 
 }
