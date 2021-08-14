@@ -12,6 +12,7 @@ public class LinkedListMain
 		//as index starts from 0, 30 is inserted in between 56 and 70
 		//by using index value..
 		list.insertAt(1, 30);
+		list.deleteAt(0);
 		list.display();
 	}
 }

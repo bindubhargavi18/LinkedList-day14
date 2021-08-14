@@ -59,5 +59,14 @@ public class LinkedList<T> implements ILinkedList<T>
 			n.next = node;
 		}
 	}
+	@Override
+	public void deleteAt(int index)
+	{
+		if(index==0)
+		{
+			head = head.next;
+		}
+	}
 
 }
+
