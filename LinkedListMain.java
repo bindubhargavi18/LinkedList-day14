@@ -14,7 +14,7 @@ public class LinkedListMain
 		list.add(70);
 		list.insertAt(2, 40); //inserted 40 after 30
 		list.display();
-		int ele=30;
+		int ele=40;
 		if(list.search(ele))
 			System.out.println("ELement found " +ele);
 		else
