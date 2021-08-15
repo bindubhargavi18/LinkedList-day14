@@ -2,7 +2,8 @@ package com.linkedlist;
 
 public class LinkedList<T> implements ILinkedList<T>
 {
-	Node<T> head;	
+	Node<T> head;
+	int size=0;
 	@Override
 	public void add(T data)
 	{
@@ -22,6 +23,7 @@ public class LinkedList<T> implements ILinkedList<T>
 			}
 			node1.next=node;
 		}
+		size++;
 	}
 	
 	@Override
@@ -34,6 +36,7 @@ public class LinkedList<T> implements ILinkedList<T>
 			node = node.next;
 		}
 		System.out.println(node.data);
+		System.out.println("size of list: "+size);
 	}
 	
 	@Override
@@ -60,6 +63,7 @@ public class LinkedList<T> implements ILinkedList<T>
 			node.next = n.next;
 			n.next = node;
 		}
+		size++;
 	}
 	
 	@Override
@@ -81,6 +85,7 @@ public class LinkedList<T> implements ILinkedList<T>
 			n.next = n1.next;
 			n1 = null;
 		}
+		size--;
 	}
 	
 	@Override
