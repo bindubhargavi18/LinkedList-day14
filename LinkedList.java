@@ -2,8 +2,7 @@ package com.linkedlist;
 
 public class LinkedList<T> implements ILinkedList<T>
 {
-	Node<T> head;
-	
+	Node<T> head;	
 	@Override
 	public void add(T data)
 	{
