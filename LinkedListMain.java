@@ -12,7 +12,11 @@ public class LinkedListMain
 		//as index starts from 0, 30 is inserted in between 56 and 70
 		//by using index value..
 		list.insertAt(1, 30);
-		list.deleteAt(2);
 		list.display();
+		int ele=30;
+		if(list.search(ele))
+			System.out.println("ELement found " +ele);
+		else
+			System.out.println("ELement not found");
 	}
 }

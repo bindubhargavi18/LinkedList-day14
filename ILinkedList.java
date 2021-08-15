@@ -6,5 +6,6 @@
  	public void display();
  	public void insertAt(int index,T data);
  	public void deleteAt(int index);
+ 	public boolean search(T searchEle);
 
  }

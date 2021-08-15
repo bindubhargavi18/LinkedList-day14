@@ -3,6 +3,7 @@ package com.linkedlist;
 public class LinkedList<T> implements ILinkedList<T>
 {
 	Node<T> head;
+	
 	@Override
 	public void add(T data)
 	{
@@ -23,6 +24,7 @@ public class LinkedList<T> implements ILinkedList<T>
 			node1.next=node;
 		}
 	}
+	
 	@Override
 	public void display()
 	{
@@ -34,6 +36,7 @@ public class LinkedList<T> implements ILinkedList<T>
 		}
 		System.out.println(node.data);
 	}
+	
 	@Override
 	public void insertAt(int index,T data)
 	{
@@ -59,6 +62,7 @@ public class LinkedList<T> implements ILinkedList<T>
 			n.next = node;
 		}
 	}
+	
 	@Override
 	public void deleteAt(int index)
 	{
@@ -79,6 +83,19 @@ public class LinkedList<T> implements ILinkedList<T>
 			n1 = null;
 		}
 	}
+	
+	@Override
+	public boolean search(T searchEle) 
+    { 
+        Node<T> temp = head;  
+        while (temp != null) 
+        { 
+            if (temp.data == searchEle) 
+                return true;    
+            temp = temp.next; 
+        } 
+        return false;    
+    }
 
 }
 
